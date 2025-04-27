@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.65087f3a.css",
+    "main.js": "/static/js/main.2ccbd5f5.js",
+    "static/js/372.4b903ad3.chunk.js": "/static/js/372.4b903ad3.chunk.js",
+    "static/media/int.jpg": "/static/media/int.41d118f0db60f240a8fb.jpg",
+    "static/media/hero4.avif": "/static/media/hero4.dce827bc9c070d51af75.avif",
+    "static/media/contact.jpg": "/static/media/contact.82bb5e0a9f91dcf7cb89.jpg",
+    "static/media/wood1.jpg": "/static/media/wood1.a589b197110b3dc26473.jpg",
+    "static/media/girl1.jpg": "/static/media/girl1.45ce65b21f3b0527821c.jpg",
+    "static/media/main.jpg": "/static/media/main.fe140da208b235e22736.jpg",
+    "static/media/home.jpg": "/static/media/home.67d492af59dc4e7275fe.jpg",
+    "static/media/hero2.avif": "/static/media/hero2.ca05f82efd556a9840e3.avif",
+    "static/media/hero5.avif": "/static/media/hero5.06931aa5a99f8935898b.avif",
+    "static/media/hero1.avif": "/static/media/hero1.f7ae3044898de3d775d8.avif",
+    "static/media/hero3.avif": "/static/media/hero3.e34e1db5b57ddb5a880b.avif",
+    "static/media/wood2.jpg": "/static/media/wood2.6590aa6174d9e0023107.jpg",
+    "index.html": "/index.html",
+    "main.65087f3a.css.map": "/static/css/main.65087f3a.css.map",
+    "main.2ccbd5f5.js.map": "/static/js/main.2ccbd5f5.js.map",
+    "372.4b903ad3.chunk.js.map": "/static/js/372.4b903ad3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.65087f3a.css",
+    "static/js/main.2ccbd5f5.js"
+  ]
+}

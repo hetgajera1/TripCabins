@@ -1,0 +1,267 @@
+export const cabinData = [
+  { 
+    id: 1, 
+    name: 'Modern A-frame treehouse', 
+    price: '$215', 
+    location: 'Michigan, United States', 
+    rating: 4.9, 
+    reviews: 127, 
+    bedrooms: 2,
+    bathrooms: 1,
+    sleeps: 4,
+    description: "On tranquil lake, modern treehouse offers a serene escape. Enjoy stunning views, cozy interiors, and outdoor adventures.",
+    longDescription: "This is an opportunity to live in a tree in a beautiful, peaceful setting. The treehouse is built on 2 trees, with a stunning platform and deck. The interior has all modern amenities, including a full kitchen, bathroom, and sleeping loft. Wake up to birds singing and enjoy your coffee on the deck overlooking the lake. Perfect for a romantic getaway or a small family adventure.",
+    amenities: ['Wifi', 'Fireplace', 'Hot tub', 'Mountain view', 'Kitchen', 'Free parking'],
+    images: [
+      'https://images.unsplash.com/photo-1518780664697-55e3ad937233',
+      'https://images.unsplash.com/photo-1542718610-a1d656d1884c',
+      'https://images.unsplash.com/photo-1568605114967-8130f3a36994',
+      'https://images.unsplash.com/photo-1563911302283-d2bc129e7570',
+      'https://images.unsplash.com/photo-1564501049412-61c2a3083791',
+      'https://images.unsplash.com/photo-1484154218962-a197022b5858'
+    ]
+  },
+  { 
+    id: 2, 
+    name: 'Lakefront Luxury Cabin', 
+    price: '$280', 
+    location: 'Minnesota, United States', 
+    rating: 4.8, 
+    reviews: 95, 
+    bedrooms: 3,
+    bathrooms: 2,
+    sleeps: 6,
+    description: "Stunning lakefront property with private dock, panoramic views, and luxury amenities for the perfect getaway.",
+    longDescription: "This beautiful lakefront cabin offers the perfect blend of rustic charm and modern luxury. Enjoy your morning coffee on the expansive deck overlooking the pristine lake, or take the provided kayaks out for a paddle. Inside you'll find vaulted ceilings, a stone fireplace, and high-end furnishings throughout. The fully equipped gourmet kitchen is perfect for preparing meals to enjoy with a view.",
+    amenities: ['Lakefront', 'Fireplace', 'Hot tub', 'Kayaks included', 'Kitchen', 'Free parking'],
+    images: [
+      'https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9',
+      'https://images.unsplash.com/photo-1501685532562-aa6846b14a0e',
+      'https://images.unsplash.com/photo-1542718610-a1d656d1884c',
+      'https://images.unsplash.com/photo-1563911302283-d2bc129e7570',
+      'https://images.unsplash.com/photo-1564501049412-61c2a3083791',
+      'https://images.unsplash.com/photo-1484154218962-a197022b5858'
+    ]
+  },
+  
+  { 
+    id: 3, 
+    name: 'Mountain View Retreat', 
+    price: '$195', 
+    location: 'Colorado, United States', 
+    rating: 4.7, 
+    reviews: 83, 
+    bedrooms: 2,
+    bathrooms: 1,
+    sleeps: 4,
+    description: "Cozy cabin with breathtaking mountain views, hiking trails nearby, and a relaxing hot tub on the deck.",
+    longDescription: "Nestled in the heart of the Rocky Mountains, this charming cabin offers spectacular views from every window. The open floor plan features a wood-burning fireplace, comfortable furnishings, and large windows that bring the outdoors in. Step outside onto the wraparound deck to enjoy the fresh mountain air or soak in the hot tub under the stars. Located just minutes from hiking trails and a short drive to ski resorts.",
+    amenities: ['Mountain view', 'Fireplace', 'Hot tub', 'Hiking trails', 'Kitchen', 'Free parking'],
+    images: [
+      'https://images.unsplash.com/photo-1542718610-a1d656d1884c',
+      'https://images.unsplash.com/photo-1518780664697-55e3ad937233',
+      'https://images.unsplash.com/photo-1568605114967-8130f3a36994',
+      'https://images.unsplash.com/photo-1563911302283-d2bc129e7570',
+      'https://images.unsplash.com/photo-1564501049412-61c2a3083791',
+      'https://images.unsplash.com/photo-1484154218962-a197022b5858'
+    ]
+  },
+  { 
+    id: 4, 
+    name: 'Rustic Forest Hideaway', 
+    price: '$175', 
+    location: 'Oregon, United States', 
+    rating: 4.6, 
+    reviews: 71, 
+    bedrooms: 1,
+    bathrooms: 1,
+    sleeps: 2,
+    description: "Secluded cabin surrounded by towering pines, perfect for a romantic getaway or peaceful solo retreat.",
+    longDescription: "Escape to this charming forest hideaway for a truly peaceful experience. The cabin is tucked away among towering pine trees, offering complete privacy and tranquility. Inside, you'll find a cozy living area with a wood-burning stove, a well-equipped kitchenette, and a comfortable bedroom. The covered porch is the perfect spot to enjoy your morning coffee while listening to the sounds of nature. Nearby hiking trails offer opportunities to explore the beautiful surrounding wilderness.",
+    amenities: ['Forest view', 'Wood stove', 'Kitchenette', 'Hiking trails', 'Free parking'],
+    images: [
+      'https://images.unsplash.com/photo-1568605114967-8130f3a36994',
+      'https://images.unsplash.com/photo-1518780664697-55e3ad937233',
+      'https://images.unsplash.com/photo-1542718610-a1d656d1884c',
+      'https://images.unsplash.com/photo-1563911302283-d2bc129e7570',
+      'https://images.unsplash.com/photo-1564501049412-61c2a3083791',
+      'https://images.unsplash.com/photo-1484154218962-a197022b5858'
+    ]
+  },
+  { 
+    id: 5, 
+    name: 'Beachfront Cabin Oasis', 
+    price: '$320', 
+    location: 'Washington, United States', 
+    rating: 4.9, 
+    reviews: 112, 
+    bedrooms: 3,
+    bathrooms: 2,
+    sleeps: 8,
+    description: "Stunning beachfront cabin with panoramic ocean views, private beach access, and spacious deck for entertaining.",
+    longDescription: "This spectacular beachfront cabin offers unparalleled views of the Pacific Ocean. Fall asleep to the sound of waves and wake up to stunning sunrises from the comfort of your bed. The open concept living area features floor-to-ceiling windows, a gourmet kitchen, and comfortable seating for the whole family. Step outside onto the expansive deck with a fire pit and direct access to your private beach. Perfect for family gatherings or a group of friends looking for a memorable coastal getaway.",
+    amenities: ['Beachfront', 'Ocean view', 'Fire pit', 'Full kitchen', 'Free parking', 'Washer/dryer'],
+    images: [
+      'https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9',
+      'https://images.unsplash.com/photo-1518780664697-55e3ad937233',
+      'https://images.unsplash.com/photo-1542718610-a1d656d1884c',
+      'https://images.unsplash.com/photo-1568605114967-8130f3a36994',
+      'https://images.unsplash.com/photo-1563911302283-d2bc129e7570',
+      'https://images.unsplash.com/photo-1564501049412-61c2a3083791'
+    ]
+  },
+  { 
+    id: 6, 
+    name: 'Desert Adobe Cabin', 
+    price: '$230', 
+    location: 'Arizona, United States', 
+    rating: 4.7, 
+    reviews: 89, 
+    bedrooms: 2,
+    bathrooms: 1,
+    sleeps: 4,
+    description: "Authentic adobe cabin with stunning desert views, stargazing deck, and unique southwestern charm.",
+    longDescription: "Experience the magic of the desert in this authentic adobe cabin. The interior features traditional southwestern decor, comfortable furnishings, and all the amenities you need for a relaxing stay. Outside, the covered patio offers shade during the day, while the rooftop deck provides the perfect spot for stargazing at night. The property is surrounded by cacti and desert flora, with breathtaking views of the mountains in the distance. Located just a short drive from hiking trails and local attractions.",
+    amenities: ['Desert view', 'Stargazing deck', 'Air conditioning', 'Kitchen', 'Free parking', 'Outdoor shower'],
+    images: [
+      'https://images.unsplash.com/photo-1563911302283-d2bc129e7570',
+      'https://images.unsplash.com/photo-1518780664697-55e3ad937233',
+      'https://images.unsplash.com/photo-1542718610-a1d656d1884c',
+      'https://images.unsplash.com/photo-1568605114967-8130f3a36994',
+      'https://images.unsplash.com/photo-1564501049412-61c2a3083791',
+      'https://images.unsplash.com/photo-1484154218962-a197022b5858'
+    ]
+  },
+  { 
+    id: 7, 
+    name: 'Riverside Cabin Retreat', 
+    price: '$245', 
+    location: 'Idaho, United States', 
+    rating: 4.8, 
+    reviews: 76, 
+    bedrooms: 2,
+    bathrooms: 2,
+    sleeps: 6,
+    description: "Peaceful cabin on the riverbank with fishing access, fire pit, and cozy interior with rustic charm.",
+    longDescription: "This charming riverside cabin offers the perfect blend of comfort and nature. The cabin sits right on the bank of a crystal-clear river, where you can fish, swim, or simply enjoy the soothing sounds of flowing water. Inside, the cabin features rustic wood finishes, a stone fireplace, and comfortable furnishings. The covered deck overlooks the river and includes a BBQ grill and dining area. Gather around the riverside fire pit in the evening to roast marshmallows and share stories under the stars.",
+    amenities: ['Riverfront', 'Fishing access', 'Fire pit', 'Fireplace', 'Kitchen', 'Free parking'],
+    images: [
+      'https://images.unsplash.com/photo-1564501049412-61c2a3083791',
+      'https://images.unsplash.com/photo-1518780664697-55e3ad937233',
+      'https://images.unsplash.com/photo-1542718610-a1d656d1884c',
+      'https://images.unsplash.com/photo-1568605114967-8130f3a36994',
+      'https://images.unsplash.com/photo-1563911302283-d2bc129e7570',
+      'https://images.unsplash.com/photo-1484154218962-a197022b5858'
+    ]
+  },
+  { 
+    id: 8, 
+    name: 'Alpine Ski Chalet', 
+    price: '$350', 
+    location: 'Utah, United States', 
+    rating: 4.9, 
+    reviews: 104, 
+    bedrooms: 4,
+    bathrooms: 3,
+    sleeps: 10,
+    description: "Luxurious ski-in/ski-out chalet with mountain views, hot tub, and upscale amenities for the perfect winter getaway.",
+    longDescription: "This stunning alpine chalet offers the ultimate ski vacation experience. Located right on the slopes with ski-in/ski-out access, you'll be the first to hit the fresh powder in the morning. The spacious interior features a grand stone fireplace, floor-to-ceiling windows with mountain views, and an open concept living area perfect for gathering after a day on the slopes. Relax in the private hot tub on the deck or warm up in the sauna. The gourmet kitchen and dining area make entertaining a breeze.",
+    amenities: ['Ski-in/ski-out', 'Hot tub', 'Sauna', 'Fireplace', 'Mountain view', 'Free parking'],
+    images: [
+      'https://images.unsplash.com/photo-1484154218962-a197022b5858',
+      'https://images.unsplash.com/photo-1518780664697-55e3ad937233',
+      'https://images.unsplash.com/photo-1542718610-a1d656d1884c',
+      'https://images.unsplash.com/photo-1568605114967-8130f3a36994',
+      'https://images.unsplash.com/photo-1563911302283-d2bc129e7570',
+      'https://images.unsplash.com/photo-1564501049412-61c2a3083791'
+    ]
+  },
+  { 
+    id: 9, 
+    name: 'Lakeside Log Cabin', 
+    price: '$265', 
+    location: 'Maine, United States', 
+    rating: 4.8, 
+    reviews: 92, 
+    bedrooms: 3,
+    bathrooms: 2,
+    sleeps: 8,
+    description: "Authentic log cabin on a serene lake with private dock, canoes, and a wraparound porch for enjoying the views.",
+    longDescription: "Experience true cabin living in this beautiful hand-hewn log home situated on the shores of a pristine lake. The cabin features authentic rustic details while providing all the modern comforts you need. The great room has soaring ceilings with exposed beams, a massive stone fireplace, and comfortable seating for the whole family. Step outside onto the wraparound porch to enjoy the lake views, or head down to your private dock where canoes and kayaks await. Perfect for family gatherings and creating lasting memories.",
+    amenities: ['Lakefront', 'Private dock', 'Canoes included', 'Fireplace', 'Kitchen', 'Free parking'],
+    images: [
+      'https://images.unsplash.com/photo-1542718610-a1d656d1884c',
+      'https://images.unsplash.com/photo-1518780664697-55e3ad937233',
+      'https://images.unsplash.com/photo-1568605114967-8130f3a36994',
+      'https://images.unsplash.com/photo-1563911302283-d2bc129e7570',
+      'https://images.unsplash.com/photo-1564501049412-61c2a3083791',
+      'https://images.unsplash.com/photo-1484154218962-a197022b5858'
+    ]
+  },
+  { 
+    id: 10, 
+    name: 'Historic Log Cabin', 
+    price: '$195', 
+    location: 'Kentucky, United States', 
+    rating: 4.6, 
+    reviews: 72, 
+    bedrooms: 2,
+    bathrooms: 1,
+    sleeps: 4,
+    description: "Restored 1800s log cabin with modern amenities, antique furnishings, and peaceful countryside setting.",
+    longDescription: "Step back in time in this lovingly restored 1800s log cabin. The owners have preserved the historic character while adding modern comforts for a comfortable stay. Original features include hand-hewn log walls, a stone fireplace, and wide plank floors, complemented by antique furnishings throughout. The cabin sits on 20 acres of rolling countryside with a fishing pond and hiking trails to explore. Enjoy morning coffee on the covered porch while watching deer graze in the meadow.",
+    amenities: ['Historic property', 'Fireplace', 'Fishing pond', 'Hiking trails', 'Kitchen', 'Free parking'],
+    images: [
+      'https://images.unsplash.com/photo-1568605114967-8130f3a36994',
+      'https://images.unsplash.com/photo-1518780664697-55e3ad937233',
+      'https://images.unsplash.com/photo-1542718610-a1d656d1884c',
+      'https://images.unsplash.com/photo-1563911302283-d2bc129e7570',
+      'https://images.unsplash.com/photo-1564501049412-61c2a3083791',
+      'https://images.unsplash.com/photo-1484154218962-a197022b5858'
+    ]
+  },
+  { 
+    id: 11, 
+    name: 'Riverside Retreat', 
+    price: '$260', 
+    location: 'Montana, United States', 
+    rating: 4.8, 
+    reviews: 104, 
+    bedrooms: 3,
+    bathrooms: 2,
+    sleeps: 6,
+    description: "Spacious cabin on a fly fishing river with mountain views, fire pit, and large deck for outdoor entertaining.",
+    longDescription: "This beautiful riverside retreat is a fly fisher's paradise, situated on the banks of one of Montana's premier trout streams. The spacious cabin features large windows that showcase the stunning river and mountain views. The great room has comfortable seating around a river rock fireplace, perfect for relaxing after a day of outdoor adventures. The expansive deck overlooks the river and includes a dining area, BBQ grill, and hot tub. Head down to the river to cast a line, or simply enjoy the peaceful sounds of flowing water.",
+    amenities: ['Riverfront', 'Fly fishing', 'Hot tub', 'Fireplace', 'Mountain view', 'Free parking'],
+    images: [
+      'https://images.unsplash.com/photo-1564501049412-61c2a3083791',
+      'https://images.unsplash.com/photo-1518780664697-55e3ad937233',
+      'https://images.unsplash.com/photo-1542718610-a1d656d1884c',
+      'https://images.unsplash.com/photo-1568605114967-8130f3a36994',
+      'https://images.unsplash.com/photo-1563911302283-d2bc129e7570',
+      'https://images.unsplash.com/photo-1484154218962-a197022b5858'
+    ]
+  },
+  { 
+    id: 12, 
+    name: 'Snowy Mountain Lodge', 
+    price: '$395', 
+    location: 'Wyoming, United States', 
+    rating: 4.9, 
+    reviews: 138, 
+    bedrooms: 4,
+    bathrooms: 3,
+    sleeps: 12,
+    description: "Spacious mountain lodge with stunning views, game room, sauna, and easy access to skiing and hiking.",
+    longDescription: "This grand mountain lodge offers luxury accommodations for large families or groups. The impressive great room features floor-to-ceiling windows with panoramic mountain views, a massive stone fireplace, and comfortable seating for everyone. The fully equipped gourmet kitchen and large dining area make meal preparation a pleasure. After a day of outdoor adventures, challenge your group to a game of pool or foosball in the game room, or relax in the sauna. In winter, enjoy easy access to nearby ski resorts; in summer, explore the surrounding hiking trails.",
+    amenities: ['Mountain view', 'Game room', 'Sauna', 'Fireplace', 'Full kitchen', 'Free parking'],
+    images: [
+      'https://images.unsplash.com/photo-1484154218962-a197022b5858',
+      'https://images.unsplash.com/photo-1518780664697-55e3ad937233',
+      'https://images.unsplash.com/photo-1542718610-a1d656d1884c',
+      'https://images.unsplash.com/photo-1568605114967-8130f3a36994',
+      'https://images.unsplash.com/photo-1563911302283-d2bc129e7570',
+      'https://images.unsplash.com/photo-1564501049412-61c2a3083791'
+    ]
+  }
+];
