@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create an axios instance with default config
 const api = axios.create({
-  baseURL: 'http://localhost:5079/api',
+  baseURL: process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL + 'api' :'http://localhost:5079/api',
   headers: {
     'Content-Type': 'application/json'
   }
@@ -13,6 +13,7 @@ const api = axios.create({
 // Cabin API calls
 export const getCabins = async () => {
   try {
+
     const response = await api.get('/cabins');
     return response.data;
   } catch (error) {
