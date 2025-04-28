@@ -40,7 +40,7 @@ const BookNow = () => {
     nights: 0,
     basePrice: 0,
     addonsPrice: 0,
-    totalPrice: 0,
+    totalPrice: bookingData.price,
     priceBreakdown: []
   });
   
@@ -84,22 +84,32 @@ const BookNow = () => {
       if (!isNaN(checkIn) && !isNaN(checkOut)) {
         const timeDiff = checkOut - checkIn;
         nights = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
       }
-      
+      console.log(nights)
       // Ensure cabin.price is a valid number
-      const nightlyRate = typeof cabin.price === 'number' && !isNaN(cabin.price) ? cabin.price : 0;
-      const basePrice = cabin.price;
-      
+      const nightlyRate = Number(bookingData.price) || 0;
+      const basePrice = nights > 0 ? nightlyRate * nights : 0;
+      console.log(basePrice)
+      // Prevent 0-night bookings
+      if (nights <= 0) {
+        setBookingSummary({
+          nights: 0,
+          basePrice: 0,
+          addonsPrice: 0,
+          totalPrice: 0,
+          priceBreakdown: []
+        });
+        return;
+      }
       // Calculate addons price
       const priceBreakdown = [];
       
       // Base price for nights
-      if (nights > 0) {
-        priceBreakdown.push({
-          name: `${nights} night${nights !== 1 ? 's' : ''} at $${nightlyRate}/night`,
-          price: basePrice
-        });
-      }
+      priceBreakdown.push({
+        name: `${nights} night${nights !== 1 ? 's' : ''} at $${nightlyRate}/night`,
+        price: basePrice
+      });
       
       // Early check-in
       if (bookingData.earlyCheckIn) {
@@ -362,7 +372,7 @@ const BookNow = () => {
                       className="w-full p-2 pl-10 border border-gray-300 rounded"
                       required
                     >
-                      {[...Array(cabin.sleeps)].map((_, i) => (
+                      {Array.isArray([...Array(cabin.sleeps)]) && [...Array(cabin.sleeps)].map((_, i) => (
                         <option key={i} value={i + 1}>{i + 1} {i === 0 ? 'guest' : 'guests'}</option>
                       ))}
                     </select>
@@ -556,18 +566,21 @@ const BookNow = () => {
               
               <div className="mb-6">
                 <h3 className="font-bold mb-3">Price Details</h3>
-                
-                {bookingSummary.priceBreakdown.map((item, index) => (
+                {bookingSummary.nights === 0 && (
+                  <div className="text-red-500 font-semibold mb-2">
+                    Please select at least one night for your stay (check-out date must be after check-in date).
+                  </div>
+                )}
+                {Array.isArray(bookingSummary.priceBreakdown) && bookingSummary.priceBreakdown.map((item, index) => (
                   <div key={index} className="flex justify-between mb-2">
                     <span>{item.name}</span>
                     <span>${isNaN(item.price) ? '0.00' : Number(item.price).toFixed(2)}</span>
                   </div>
                 ))}
-                
                 <div className="border-t border-gray-200 pt-3 mt-3">
                   <div className="flex justify-between font-bold text-lg">
                     <span>Total</span>
-                    <span>${isNaN(bookingData.price) ? '0.00' : Number(bookingData.price).toFixed(2)}</span>
+                    <span>${isNaN(bookingSummary.totalPrice) ? '0.00' : Number(bookingSummary.totalPrice).toFixed(2)}</span>
                   </div>
                 </div>
               </div>

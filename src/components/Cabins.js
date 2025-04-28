@@ -270,7 +270,7 @@ const Cabins = () => {
         
         {/* Cabins Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredCabins.map((cabin) => (
+          {Array.isArray(filteredCabins) && filteredCabins.map((cabin) => (
             <Link to={`/cabin/${cabin.id}`} key={cabin.id} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="relative h-64">
                 <img 

@@ -13,7 +13,9 @@ const BestOffers = () => {
       try {
         setLoading(true);
         const data = await getCabins();
-        setCabins(data);
+        // Handle both array and object API responses
+        setCabins(Array.isArray(data) ? data : data.cabins || []);
+        console.log(cabins)
         setError(null);
       } catch (err) {
         console.error('Error fetching cabins:', err);
@@ -62,7 +64,7 @@ const BestOffers = () => {
         <h2 className="text-3xl font-semibold mb-8">Best offers</h2>
         <div className="overflow-x-auto">
           <div className="flex space-x-4">
-            {cabins.map((cabin) => (
+            {Array.isArray(cabins) && cabins.map((cabin) => (
               <div key={cabin.id} className="min-w-[300px] bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="relative h-48 overflow-hidden">
                   <img 

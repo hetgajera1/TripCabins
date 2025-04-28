@@ -66,7 +66,7 @@ const UserProfile = () => {
       setLoading(true);
       const bookingsFromApi = await getUserBookings(uid);
       console.log('Bookings from API:', bookingsFromApi);
-      setBookings(bookingsFromApi.map(normalizeBooking));
+      setBookings(Array.isArray(bookingsFromApi) ? bookingsFromApi.map(normalizeBooking) : []);
       setError(null);
     } catch (apiErr) {
       setError('Failed to fetch bookings from the server.');
@@ -291,11 +291,11 @@ const UserProfile = () => {
       });
       
       // Update bookings state
-      setBookings(prevBookings => 
-        prevBookings.map(booking => 
-          booking.id === selectedBooking.id ? updatedBooking : booking
-        )
-      );
+      setBookings(prevBookings =>
+  Array.isArray(prevBookings) ? prevBookings.map(booking =>
+    booking.id === selectedBooking.id ? updatedBooking : booking
+  ) : []
+);
       
       setBookingUpdateSuccess(true);
       
@@ -722,7 +722,7 @@ const UserProfile = () => {
                     )}
                     
                     <div className="space-y-6">
-                      {bookings.map((booking) => (
+                      {Array.isArray(bookings) && bookings.map((booking) => (
                         <div key={booking.id} className="bg-gray-50 p-6 rounded-lg border border-gray-200">
                           <div className="flex flex-col md:flex-row justify-between mb-4">
                             <div>

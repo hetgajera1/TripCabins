@@ -115,7 +115,7 @@ const CabinDetails = () => {
       guests: bookingData.numberOfGuests,
       earlyCheckIn: bookingData.earlyCheckIn,
       firewoodPackage: bookingData.firewoodPackage,
-      price: cabin.price
+      price: typeof cabin.price === 'string' ? Number(cabin.price.replace(/[^0-9.]/g, '')) : Number(cabin.price)
     }).toString();
     navigate(`/book/${id}?${queryParams}`);
   };
@@ -170,7 +170,7 @@ const CabinDetails = () => {
             />
           </div>
           <div className="grid grid-cols-2 gap-4">
-            {cabin.images && cabin.images.slice(0, 4).map((image, index) => (
+            {Array.isArray(cabin.images) && cabin.images.slice(0, 4).map((image, index) => (
               <img 
                 key={index}
                 src={image} 
@@ -205,7 +205,7 @@ const CabinDetails = () => {
             <div className="bg-white p-6 rounded-lg shadow-md mb-8">
               <h2 className="text-2xl font-bold text-[#1e4e5f] mb-4">Amenities</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {cabin.amenities && cabin.amenities.map((amenity, index) => (
+                {Array.isArray(cabin.amenities) && cabin.amenities.map((amenity, index) => (
                   <div key={index} className="flex items-center">
                     {amenity.includes('Wifi') && <FaWifi className="mr-2 text-[#4d6a2d]" />}
                     {amenity.includes('AC') && <FaSnowflake className="mr-2 text-[#4d6a2d]" />}
@@ -237,7 +237,7 @@ const CabinDetails = () => {
                 
                 {reviews.length > 0 ? (
                   <div className="space-y-6">
-                    {(showAllReviews ? reviews : reviews.slice(0, 3)).map((review, index) => (
+                    {Array.isArray(reviews) && (showAllReviews ? reviews : reviews.slice(0, 3)).map((review, index) => (
                       <div key={index} className="border-b border-gray-200 pb-6 last:border-0">
                         <div className="flex items-start mb-2">
                           <img src={review.avatar || `https://randomuser.me/api/portraits/men/${index}.jpg`} alt={review.name} className="w-12 h-12 rounded-full mr-4" />
@@ -247,7 +247,7 @@ const CabinDetails = () => {
                           </div>
                         </div>
                         <div className="flex items-center mb-2">
-                          {[...Array(5)].map((_, i) => (
+                          {Array.isArray([...Array(5)]) && [...Array(5)].map((_, i) => (
                             <FaStar key={i} className={i < review.rating ? "text-yellow-400" : "text-gray-300"} />
                           ))}
                         </div>
@@ -373,7 +373,7 @@ const CabinDetails = () => {
                     onChange={handleBookingChange}
                     className="w-full p-2 border border-gray-300 rounded"
                   >
-                    {[...Array(cabin.sleeps)].map((_, i) => (
+                    {Array.isArray([...Array(cabin.sleeps)]) && [...Array(cabin.sleeps)].map((_, i) => (
                       <option key={i} value={i + 1}>{i + 1} {i === 0 ? 'guest' : 'guests'}</option>
                     ))}
                   </select>
